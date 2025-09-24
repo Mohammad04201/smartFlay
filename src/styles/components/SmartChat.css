@@ -1,0 +1,451 @@
+/* SmartChat.css - تصميم متقدم للشات الذكي */
+
+.smart-chat-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: linear-gradient(135deg, var(--primary-navy) 0%, var(--soft-blue) 100%);
+  color: white;
+  border: none;
+  border-radius: 50px;
+  padding: 15px 25px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 8px 25px rgba(15, 23, 42, 0.3);
+  transition: all 0.3s ease;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.smart-chat-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 35px rgba(15, 23, 42, 0.4);
+}
+
+.smart-chat-btn i {
+  font-size: 18px;
+}
+
+.smart-chat-window {
+  position: fixed;
+  bottom: 90px;
+  right: 20px;
+  width: 400px;
+  height: 600px;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: column;
+  z-index: 999;
+  overflow: hidden;
+  border: 1px solid #e1e8ed;
+}
+
+.smart-chat-header {
+  background: linear-gradient(135deg, var(--primary-navy) 0%, var(--soft-blue) 100%);
+  color: white;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.header-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.clear-btn, .close-btn {
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  color: white;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.clear-btn:hover, .close-btn:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: scale(1.1);
+}
+
+.gemini-badge, .local-badge {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  margin-left: 10px;
+  font-weight: 500;
+}
+
+.gemini-badge {
+  background: linear-gradient(135deg, #ff6b6b, #ee5a24);
+}
+
+.local-badge {
+  background: linear-gradient(135deg, #4ecdc4, #44a08d);
+}
+
+.smart-chat-body {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+  background: var(--light-gray);
+}
+
+.msg-bubble {
+  margin-bottom: 20px;
+  max-width: 85%;
+}
+
+.msg-bubble.user {
+  margin-left: auto;
+}
+
+.msg-bubble.ai {
+  margin-right: auto;
+}
+
+.msg-content {
+  background: white;
+  padding: 15px 18px;
+  border-radius: 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  line-height: 1.5;
+  font-size: 14px;
+}
+
+.msg-bubble.user .msg-content {
+  background: linear-gradient(135deg, var(--primary-navy) 0%, var(--soft-blue) 100%);
+  color: white;
+  border-bottom-right-radius: 5px;
+}
+
+.msg-bubble.ai .msg-content {
+  background: white;
+  color: #333;
+  border-bottom-left-radius: 5px;
+  border: 1px solid #e1e8ed;
+}
+
+.msg-time {
+  font-size: 11px;
+  color: #999;
+  margin-top: 5px;
+  text-align: right;
+}
+
+.msg-bubble.ai .msg-time {
+  text-align: left;
+}
+
+/* تصميم متقدم للبطاقات */
+.chat-flights-list {
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.chat-flight-card {
+  background: linear-gradient(135deg, var(--light-gray) 0%, #ffffff 100%);
+  border: 1px solid #dee2e6;
+  border-radius: 12px;
+  padding: 15px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.chat-flight-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  border-color: var(--primary-navy);
+}
+
+.chat-flight-airline {
+  font-weight: 700;
+  color: var(--primary-navy);
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+
+.chat-flight-route {
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+.chat-flight-date {
+  color: #666;
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+.chat-flight-price {
+  font-weight: 700;
+  color: #28a745;
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.chat-flight-status {
+  background: #28a745;
+  color: white;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  text-align: center;
+  display: inline-block;
+}
+
+/* تصميم متقدم للاقتراحات */
+.suggestion-btn {
+  background: linear-gradient(135deg, var(--primary-navy) 0%, var(--soft-blue) 100%);
+  color: white;
+  border: none;
+  border-radius: 25px;
+  padding: 8px 16px;
+  margin: 5px 5px 0 0;
+  font-size: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+.suggestion-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 5px 15px rgba(90, 154, 156, 0.3);
+}
+
+/* تصميم متقدم للتحميل */
+.loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  background: var(--primary-navy);
+  border-radius: 50%;
+  animation: bounce 1.4s ease-in-out infinite both;
+}
+
+.dot:nth-child(1) { animation-delay: -0.32s; }
+.dot:nth-child(2) { animation-delay: -0.16s; }
+
+@keyframes bounce {
+  0%, 80%, 100% {
+    transform: scale(0);
+  }
+  40% {
+    transform: scale(1);
+  }
+}
+
+/* تصميم متقدم للخطأ */
+.msg-bubble.ai.error .msg-content {
+  background: linear-gradient(135deg, #ff6b6b, #ee5a24);
+  color: white;
+}
+
+/* تصميم متقدم للإدخال */
+.smart-chat-input {
+  padding: 20px;
+  background: white;
+  border-top: 1px solid #e1e8ed;
+  display: flex;
+  gap: 10px;
+}
+
+.smart-chat-input input {
+  flex: 1;
+  border: 2px solid #e1e8ed;
+  border-radius: 25px;
+  padding: 12px 20px;
+  font-size: 14px;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.smart-chat-input input:focus {
+  border-color: var(--primary-navy);
+  box-shadow: 0 0 0 3px rgba(15, 23, 42, 0.1);
+}
+
+.smart-chat-input input::placeholder {
+  color: #999;
+}
+
+.smart-chat-input button {
+  background: linear-gradient(135deg, var(--primary-navy) 0%, var(--soft-blue) 100%);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  font-size: 16px;
+}
+
+.smart-chat-input button:hover:not(:disabled) {
+  transform: scale(1.1);
+  box-shadow: 0 5px 15px rgba(90, 154, 156, 0.3);
+}
+
+.smart-chat-input button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* تصميم متقدم للنصوص */
+.msg-content strong {
+  font-weight: 700;
+}
+
+.msg-content em {
+  font-style: italic;
+}
+
+/* تصميم متقدم للقوائم */
+.msg-content ul {
+  margin: 10px 0;
+  padding-left: 20px;
+}
+
+.msg-content li {
+  margin: 5px 0;
+}
+
+/* تصميم متقدم للروابط */
+.msg-content a {
+  color: var(--primary-navy);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.msg-content a:hover {
+  text-decoration: underline;
+}
+
+/* تصميم متقدم للكود */
+.msg-content code {
+  background: var(--light-gray);
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-family: 'Courier New', monospace;
+  font-size: 13px;
+}
+
+/* تصميم متقدم للاقتباسات */
+.msg-content blockquote {
+  border-left: 4px solid var(--primary-navy);
+  margin: 10px 0;
+  padding-left: 15px;
+  color: #666;
+  font-style: italic;
+}
+
+/* تصميم متقدم للجداول */
+.msg-content table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 15px 0;
+}
+
+.msg-content th,
+.msg-content td {
+  border: 1px solid #e1e8ed;
+  padding: 8px 12px;
+  text-align: left;
+}
+
+.msg-content th {
+  background: var(--light-gray);
+  font-weight: 600;
+}
+
+/* تصميم متقدم للأيقونات */
+.msg-content .icon {
+  display: inline-block;
+  margin-right: 5px;
+  font-size: 16px;
+}
+
+/* تصميم متقدم للألوان */
+.msg-content .success { color: #28a745; }
+.msg-content .warning { color: #ffc107; }
+.msg-content .error { color: #dc3545; }
+.msg-content .info { color: #17a2b8; }
+
+/* تصميم متقدم للخلفيات */
+.msg-content .bg-success { background: #d4edda; }
+.msg-content .bg-warning { background: #fff3cd; }
+.msg-content .bg-error { background: #f8d7da; }
+.msg-content .bg-info { background: #d1ecf1; }
+
+/* تصميم متقدم للحدود */
+.msg-content .border {
+  border: 1px solid #e1e8ed;
+  border-radius: 8px;
+  padding: 10px;
+}
+
+/* تصميم متقدم للظلال */
+.msg-content .shadow {
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* تصميم متقدم للانتقالات */
+.msg-content * {
+  transition: all 0.3s ease;
+}
+
+/* تصميم متقدم للاستجابة */
+@media (max-width: 480px) {
+  .smart-chat-window {
+    width: 95vw;
+    right: 2.5vw;
+    left: 2.5vw;
+  }
+  
+  .smart-chat-btn {
+    right: 10px;
+    bottom: 10px;
+    padding: 12px 20px;
+    font-size: 14px;
+  }
+}
+
+/* تصميم متقدم للطباعة */
+@media print {
+  .smart-chat-btn,
+  .smart-chat-input {
+    display: none;
+  }
+  
+  .smart-chat-window {
+    position: static;
+    box-shadow: none;
+    border: 1px solid #ccc;
+  }
+}
